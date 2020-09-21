@@ -59,4 +59,4 @@ my $right_ret = <<'END';
 END
 chomp $right_ret;
 my $ret = $res->content;
-is($ret, $right_ret, 'Get main page.');
+is($ret, $right_ret, 'Get default main page.');
