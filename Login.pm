@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 use CSS::Struct::Output::Raw;
-use Plack::Util::Accessor qw(css login_link login_title title tags);
+use Plack::Util::Accessor qw(css generator login_link login_title title tags);
 use Tags::HTML::Page::Begin;
 use Tags::HTML::Page::End;
 use Tags::Output::Raw;
@@ -36,6 +36,10 @@ sub prepare_app {
 
 	if (! $self->tags || ! $self->tags->isa('Tags::Output')) {
 		$self->tags(Tags::Output::Raw->new('xml' => 1));
+	}
+
+	if (! $self->generator) {
+		$self->generator('Login');
 	}
 
 	if (! $self->title) {
@@ -87,6 +91,7 @@ sub _tags {
 
 	Tags::HTML::Page::Begin->new(
 		'css' => $self->css,
+		'generator' => $self->generator,
 		'lang' => {
 			'title' => $self->title,
 		},
