@@ -118,3 +118,138 @@ sub _tags {
 1;
 
 __END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+Plack::App::Login - Plack login application.
+
+=head1 SYNOPSIS
+
+ use Plack::App::Login;
+
+ my $obj = Plack::App::Login->new(%parameters);
+ my $psgi_ar = $obj->call($env);
+ my $app = $obj->to_app;
+
+=head1 METHODS
+
+=head2 C<new>
+
+ my $obj = Plack::App::Login->new(%parameters);
+
+Constructor.
+
+Returns instance of object.
+
+=head2 C<call>
+
+ my $psgi_ar = $obj->call($env);
+
+Implementation of login page.
+
+Returns reference to array (PSGI structure).
+
+=head2 C<to_app>
+
+ my $app = $obj->to_app;
+
+Creates Plack application.
+
+Returns Plack::Component object.
+
+=head1 EXAMPLE
+
+ use strict;
+ use warnings;
+
+ use CSS::Struct::Output::Indent;
+ use Plack::App::Login;
+ use Plack::Runner;
+ use Tags::Output::Indent;
+
+ # Run application with one PYX file.
+ my $app = Plack::App::Login->new(
+         'css' => CSS::Struct::Output::Indent->new,
+         'tags' => Tags::Output::Indent->new(
+                 'preserved' => ['style'],
+                 'xml' => 1,
+         ),
+ )->to_app;
+ Plack::Runner->new->run($app);
+
+ # Output:
+ # HTTP::Server::PSGI: Accepting connections at http://0:5000/
+
+ # > curl http://localhost:5000/
+ # <!DOCTYPE html>
+ # <html>
+ #   <head>
+ #     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ #     <meta charset="UTF-8" />
+ #     <meta name="generator" content=
+ #       "Perl module: Tags::HTML::Page::Begin, Version: 0.08" />
+ #     <title>
+ #       Login page
+ #     </title>
+ #     <style type="text/css">
+ # .outer {
+ #         position: fixed;
+ #         top: 50%;
+ #         left: 50%;
+ #         transform: translate(-50%, -50%);
+ # }
+ # .login {
+ #         text-align: center;
+ #         background-color: blue;
+ #         padding: 1em;
+ # }
+ # .login a {
+ #         text-decoration: none;
+ #         color: white;
+ #         font-size: 3em;
+ # }
+ # </style>
+ #   </head>
+ #   <body class="outer">
+ #     <div class="login">
+ #       <a href="login">
+ #         LOGIN
+ #       </a>
+ #     </div>
+ #   </body>
+ # </html>
+
+=head1 DEPENDENCIES
+
+L<CSS::Struct::Output::Raw>,
+L<Plack::Util::Accessor>,
+L<Tags::HTML::Page::Begin>,
+L<Tags::HTML::Page::End>,
+L<Tags::Output::Raw>,
+L<Unicode::UTF8>.
+
+=head1 REPOSITORY
+
+L<https://github.com/michal-josef-spacek/Plack-App-Login>
+
+=head1 AUTHOR
+
+Michal Josef Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
+
+=head1 LICENSE AND COPYRIGHT
+
+© 2020 Michal Josef Špaček
+
+BSD 2-Clause License
+
+=head1 VERSION
+
+0.01
+
+=cut
