@@ -2,10 +2,12 @@ TODO
 ====
 2. Dodelat coverage.
 3. Proc mam newline in Tags::Output::Raw test.
-4. Do dokumentace pridat parametry.
 5.
 
 Applied
 =======
 1. Tohle asi mergnout s Plack-App-*-Unauthorized
+OK [20200921] skim
+
+4. Do dokumentace pridat parametry.
 OK [20200921] skim

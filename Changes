@@ -1,4 +1,5 @@
 0.02
+ - Add constructor parameters to doc.
  - Add missing $VERSION variable.
 
 0.01 2020-09-21T23:58:26+02:00

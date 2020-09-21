@@ -16,6 +16,42 @@ METHODS
 
     Returns instance of object.
 
+    *       "css"
+
+            Instance of CSS::Struct::Output object.
+
+            Default value is CSS::Struct::Output::Raw instance.
+
+    *       "generator"
+
+            HTML generator string.
+
+            Default value is 'Login'.
+
+    *       "login_link"
+
+            Login link.
+
+            Default value is 'login'.
+
+    *       "login_title"
+
+            Login title.
+
+            Default value is 'LOGIN'.
+
+    *       "tags"
+
+            Instance of Tags::Output object.
+
+            Default value is Tags::Output::Raw->new('xml' => 1) instance.
+
+    *       "title"
+
+            Page title.
+
+            Default value is 'Login page'.
+
   "call"
      my $psgi_ar = $obj->call($env);
 

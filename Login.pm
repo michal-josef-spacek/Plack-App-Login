@@ -147,6 +147,46 @@ Constructor.
 
 Returns instance of object.
 
+=over 8
+
+=item * C<css>
+
+Instance of CSS::Struct::Output object.
+
+Default value is CSS::Struct::Output::Raw instance.
+
+=item * C<generator>
+
+HTML generator string.
+
+Default value is 'Login'.
+
+=item * C<login_link>
+
+Login link.
+
+Default value is 'login'.
+
+=item * C<login_title>
+
+Login title.
+
+Default value is 'LOGIN'.
+
+=item * C<tags>
+
+Instance of Tags::Output object.
+
+Default value is Tags::Output::Raw->new('xml' => 1) instance.
+
+=item * C<title>
+
+Page title.
+
+Default value is 'Login page'.
+
+=back
+
 =head2 C<call>
 
  my $psgi_ar = $obj->call($env);
