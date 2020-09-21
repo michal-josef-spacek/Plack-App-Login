@@ -3,9 +3,8 @@ abstract: 'Plack login application.'
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:
-  Error::Pure: 0
+  CSS::Struct::Output::Indent: 0
   ExtUtils::MakeMaker: 6.59
-  File::Object: 0
   HTTP::Request: 0
   Plack::Test: 0
   Tags::Output::Indent: 0
