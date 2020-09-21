@@ -1,4 +1,4 @@
-0.02
+0.02 2020-09-22T00:10:45+02:00
  - Add constructor parameters to doc.
  - Add missing $VERSION variable.
  - Sort accessors in code.
