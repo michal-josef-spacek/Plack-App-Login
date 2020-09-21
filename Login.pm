@@ -11,6 +11,8 @@ use Tags::HTML::Page::End;
 use Tags::Output::Raw;
 use Unicode::UTF8 qw(decode_utf8 encode_utf8);
 
+our $VERSION = 0.02;
+
 sub call {
 	my ($self, $env) = @_;
 

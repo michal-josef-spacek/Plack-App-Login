@@ -6,4 +6,4 @@ use Test::More 'tests' => 2;
 use Test::NoWarnings;
 
 # Test.
-is($Plack::App::Login::VERSION, undef, 'Version.');
+is($Plack::App::Login::VERSION, 0.02, 'Version.');
