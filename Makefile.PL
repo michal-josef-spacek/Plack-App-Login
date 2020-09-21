@@ -18,10 +18,10 @@ name 'Plack-App-Login';
 perl_version 5.008;
 readme_from 'Login.pm';
 recursive_author_tests('xt');
-requires 'Encode' => 0;
-requires 'English' => 0;
-requires 'Error::Pure' => 0;
+requires 'CSS::Struct::Output::Raw' => 0;
 requires 'Plack::Util::Accessor' => 0;
+requires 'Tags::HTML::Page::Begin' => 0.08;
+requires 'Tags::HTML::Page::End' => 0.04;
 requires 'Tags::Output::Raw' => 0;
 requires 'Unicode::UTF8' => 0;
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
