@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 use CSS::Struct::Output::Raw;
-use Plack::Util::Accessor qw(css generator login_link login_title title tags);
+use Plack::Util::Accessor qw(css generator login_link login_title tags title);
 use Tags::HTML::Page::Begin;
 use Tags::HTML::Page::End;
 use Tags::Output::Raw;
