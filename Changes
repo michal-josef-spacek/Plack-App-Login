@@ -1,4 +1,5 @@
 0.03
+ - Update to Tags::HTML::Page::Begin 0.10.
 
 0.02 2020-09-22T00:10:45+02:00
  - Add constructor parameters to doc.
