@@ -213,7 +213,7 @@ Returns Plack::Component object.
  use Plack::Runner;
  use Tags::Output::Indent;
 
- # Run application with one PYX file.
+ # Run application.
  my $app = Plack::App::Login->new(
          'css' => CSS::Struct::Output::Indent->new,
          'tags' => Tags::Output::Indent->new(
