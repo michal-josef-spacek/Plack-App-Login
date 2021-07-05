@@ -1,4 +1,5 @@
 0.04
+ - Change default of generator() setting.
  - Fix comment in example.
  - Update copyright years.
 

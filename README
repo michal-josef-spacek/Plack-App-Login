@@ -26,7 +26,7 @@ METHODS
 
             HTML generator string.
 
-            Default value is 'Login'.
+            Default value is 'Plack::App::Login; Version: __VERSION__'.
 
     *       "login_link"
 

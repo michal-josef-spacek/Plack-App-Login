@@ -41,7 +41,7 @@ sub prepare_app {
 	}
 
 	if (! $self->generator) {
-		$self->generator('Login');
+		$self->generator(__PACKAGE__.'; Version: '.$VERSION);
 	}
 
 	if (! $self->title) {
@@ -159,7 +159,7 @@ Default value is CSS::Struct::Output::Raw instance.
 
 HTML generator string.
 
-Default value is 'Login'.
+Default value is 'Plack::App::Login; Version: __VERSION__'.
 
 =item * C<login_link>
 
