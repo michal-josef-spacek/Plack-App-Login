@@ -1,6 +1,7 @@
 0.04
  - Change default of generator() setting.
  - Fix comment in example.
+ - Rewrite to use of Tags::HTML::Login::Button helper.
  - Update copyright years.
 
 0.03 2020-10-21T23:27:25+02:00

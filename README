@@ -129,8 +129,8 @@ EXAMPLE
 
 DEPENDENCIES
     CSS::Struct::Output::Raw, Plack::Util::Accessor,
-    Tags::HTML::Page::Begin, Tags::HTML::Page::End, Tags::Output::Raw,
-    Unicode::UTF8.
+    Tags::HTML::Login::Button, Tags::HTML::Page::Begin,
+    Tags::HTML::Page::End, Tags::Output::Raw, Unicode::UTF8.
 
 REPOSITORY
     <https://github.com/michal-josef-spacek/Plack-App-Login>

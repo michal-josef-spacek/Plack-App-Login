@@ -6,6 +6,7 @@ use warnings;
 
 use CSS::Struct::Output::Raw;
 use Plack::Util::Accessor qw(css generator login_link login_title tags title);
+use Tags::HTML::Login::Button;
 use Tags::HTML::Page::Begin;
 use Tags::HTML::Page::End;
 use Tags::Output::Raw;
@@ -56,32 +57,21 @@ sub prepare_app {
 		$self->login_title('LOGIN');
 	}
 
+	# Tags helper for login button.
+	$self->{'_login_button'} = Tags::HTML::Login::Button->new(
+		'css' => $self->css,
+		'link' => $self->login_link,
+		'tags' => $self->tags,
+		'title' => $self->login_title,
+	);
+
 	return;
 }
 
 sub _css {
 	my $self = shift;
 
-	$self->css->put(
-		['s', '.outer'],
-		['d', 'position', 'fixed'],
-		['d', 'top', '50%'],
-		['d', 'left', '50%'],
-		['d', 'transform', 'translate(-50%, -50%)'],
-		['e'],
-
-		['s', '.login'],
-		['d', 'text-align', 'center'],
-		['d', 'background-color', 'blue'],
-		['d', 'padding', '1em'],
-		['e'],
-
-		['s', '.login a'],
-		['d', 'text-decoration', 'none'],
-		['d', 'color', 'white'],
-		['d', 'font-size', '3em'],
-		['e'],
-	);
+	$self->{'_login_button'}->process_css;
 
 	return;
 }
@@ -99,17 +89,7 @@ sub _tags {
 		},
 		'tags' => $self->tags,
 	)->process;
-	$self->tags->put(
-		['a', 'class', 'outer'],
-
-		['b', 'div'],
-		['a', 'class', 'login'],
-		['b', 'a'],
-		['a', 'href', $self->login_link],
-		['d', $self->login_title],
-		['e', 'a'],
-		['e', 'div'],
-	);
+	$self->{'_login_button'}->process;
 	Tags::HTML::Page::End->new(
 		'tags' => $self->tags,
 	)->process;
@@ -269,6 +249,7 @@ Returns Plack::Component object.
 
 L<CSS::Struct::Output::Raw>,
 L<Plack::Util::Accessor>,
+L<Tags::HTML::Login::Button>,
 L<Tags::HTML::Page::Begin>,
 L<Tags::HTML::Page::End>,
 L<Tags::Output::Raw>,

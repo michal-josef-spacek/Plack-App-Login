@@ -2,9 +2,6 @@ TODO
 ====
 2. Dodelat coverage.
 3. Proc mam newline v Tags::Output::Raw testu.
-5. Presunout vlastni HTML a CSS to vlastniho objektu?
-HTML::Tags::Login::Button
-Patri prepsat na tohle, aby to fungovalo stejne
 6. Pridat HTML::Tags::Login::Access moznost.
 7.
 
@@ -15,3 +12,8 @@ OK [20200921] skim
 
 4. Do dokumentace pridat parametry.
 OK [20200921] skim
+
+5. Presunout vlastni HTML a CSS to vlastniho objektu?
+HTML::Tags::Login::Button
+Patri prepsat na tohle, aby to fungovalo stejne
+OK [20211002] skim

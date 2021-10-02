@@ -20,6 +20,7 @@ readme_from 'Login.pm';
 recursive_author_tests('xt');
 requires 'CSS::Struct::Output::Raw' => 0;
 requires 'Plack::Util::Accessor' => 0;
+requires 'Tags::HTML::Login::Button' => 0;
 requires 'Tags::HTML::Page::Begin' => 0.10;
 requires 'Tags::HTML::Page::End' => 0.04;
 requires 'Tags::Output::Raw' => 0;
