@@ -3,7 +3,10 @@ TODO
 2. Dodelat coverage.
 3. Proc mam newline v Tags::Output::Raw testu.
 5. Presunout vlastni HTML a CSS to vlastniho objektu?
-6.
+HTML::Tags::Login::Button
+Patri prepsat na tohle, aby to fungovalo stejne
+6. Pridat HTML::Tags::Login::Access moznost.
+7.
 
 Applied
 =======
