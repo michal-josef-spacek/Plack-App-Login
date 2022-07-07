@@ -1,4 +1,4 @@
-0.04
+0.04 2022-07-07T22:44:36+02:00
  - Change default of generator() setting.
  - Fix comment in example.
  - Rewrite to use of Tags::HTML::Login::Button helper.
