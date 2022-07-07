@@ -3,6 +3,7 @@
  - Fix comment in example.
  - Rewrite to use of Tags::HTML::Login::Button helper.
  - Update copyright years.
+ - Update to Tags::HTML::Page::Begin 0.13.
 
 0.03 2020-10-21T23:27:25+02:00
  - Update to Tags::HTML::Page::Begin 0.10.

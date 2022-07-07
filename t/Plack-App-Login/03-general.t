@@ -15,7 +15,7 @@ my $test = Plack::Test->create($app);
 my $res = $test->request(HTTP::Request->new(GET => '/'));
 my $right_ret = <<"END";
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="generator" content="Plack::App::Login; Version: $Plack::App::Login::VERSION" /><title>Login page</title><style type="text/css">.outer{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);}.login{text-align:center;background-color:blue;padding:1em;}.login a{text-decoration:none;color:white;font-size:3em;}
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="generator" content="Plack::App::Login; Version: $Plack::App::Login::VERSION" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Login page</title><style type="text/css">.outer{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);}.login{text-align:center;background-color:blue;padding:1em;}.login a{text-decoration:none;color:white;font-size:3em;}
 </style></head><body class="outer"><div class="login"><a href="login">LOGIN</a></div></body></html>
 END
 chomp $right_ret;
@@ -38,6 +38,7 @@ $right_ret = <<"END";
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="generator" content="Plack::App::Login; Version: $Plack::App::Login::VERSION" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Login page
     </title>
@@ -93,6 +94,7 @@ $right_ret = <<'END';
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="generator" content="Foo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Foo
     </title>
