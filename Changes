@@ -1,3 +1,5 @@
+0.06
+
 0.05 2022-09-12T18:52:17+02:00
  - Add better check for instances in css() and tags().
  - Rename example to better name.
