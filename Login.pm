@@ -185,6 +185,8 @@ Returns Plack::Component object.
 
 =head1 EXAMPLE
 
+=for comment filename=login_psgi.pl
+
  use strict;
  use warnings;
 

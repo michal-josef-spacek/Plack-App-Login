@@ -1,4 +1,5 @@
 0.05
+ - Rename example to better name.
 
 0.04 2022-07-07T22:44:36+02:00
  - Change default of generator() setting.
