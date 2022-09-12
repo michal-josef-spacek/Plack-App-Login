@@ -3,7 +3,8 @@ TODO
 2. Dodelat coverage.
 3. Proc mam newline v Tags::Output::Raw testu.
 6. Pridat Tags::HTML::Login::Access moznost.
-7.
+7. Rewrite to use of Plack::Component::Tags::HTML
+8.
 
 Applied
 =======
