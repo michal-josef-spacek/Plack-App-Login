@@ -2,7 +2,7 @@ TODO
 ====
 2. Dodelat coverage.
 3. Proc mam newline v Tags::Output::Raw testu.
-6. Pridat HTML::Tags::Login::Access moznost.
+6. Pridat Tags::HTML::Login::Access moznost.
 7.
 
 Applied
