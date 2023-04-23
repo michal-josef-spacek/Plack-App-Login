@@ -208,10 +208,12 @@ Returns Plack::Component object.
  use Plack::App::Login;
  use Plack::Runner;
  use Tags::Output::Indent;
+ use Unicode::UTF8 qw(decode_utf8);
 
  # Run application.
  my $app = Plack::App::Login->new(
          'css' => CSS::Struct::Output::Indent->new,
+         'login_title' => decode_utf8('Přihlašovací stránka'),
          'tags' => Tags::Output::Indent->new(
                  'preserved' => ['style'],
                  'xml' => 1,
@@ -227,8 +229,8 @@ Returns Plack::Component object.
  # <html>
  #   <head>
  #     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- #     <meta charset="UTF-8" />
  #     <meta name="generator" content="Plack::App::Login; Version: 0.07" />
+ #     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  #     <title>
  #       Login page
  #     </title>
@@ -246,20 +248,27 @@ Returns Plack::Component object.
  # }
  # .login {
  #         text-align: center;
- #         background-color: blue;
- #         padding: 1em;
  # }
  # .login a {
  #         text-decoration: none;
- #         color: white;
- #         font-size: 3em;
+ #         background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+ #         background-repeat: repeat-x;
+ #         border: 1px solid #adadad;
+ #         border-radius: 4px;
+ #         color: black;
+ #         font-family: sans-serif!important;
+ #         padding: 15px 40px;
+ # }
+ # .login a:hover {
+ #         background-color: #e0e0e0;
+ #         background-image: none;
  # }
  # </style>
  #   </head>
  #   <body class="outer">
  #     <div class="login">
  #       <a href="login">
- #         LOGIN
+ #         Přihlašovací stránka
  #       </a>
  #     </div>
  #   </body>
