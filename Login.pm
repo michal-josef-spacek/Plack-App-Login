@@ -162,6 +162,7 @@ Returns Plack::Component object.
  # Run application.
  my $app = Plack::App::Login->new(
          'css' => CSS::Struct::Output::Indent->new,
+         'generator' => 'Plack::App::Login',
          'login_title' => decode_utf8('Přihlašovací stránka'),
          'tags' => Tags::Output::Indent->new(
                  'preserved' => ['style'],
@@ -178,7 +179,7 @@ Returns Plack::Component object.
  # <html>
  #   <head>
  #     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- #     <meta name="generator" content="Plack::App::Login; Version: 0.07" />
+ #     <meta name="generator" content="Plack::App::Login" />
  #     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  #     <title>
  #       Login page
