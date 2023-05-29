@@ -7,7 +7,7 @@ use warnings;
 use Plack::Util::Accessor qw(generator login_link login_title title);
 use Tags::HTML::Login::Button;
 
-our $VERSION = 0.08;
+our $VERSION = 0.09;
 
 sub _css {
 	my $self = shift;
@@ -258,6 +258,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.08
+0.09
 
 =cut
