@@ -145,6 +145,10 @@ DEPENDENCIES
     Scalar::Util, Tags::HTML::Login::Button, Tags::HTML::Page::Begin,
     Tags::HTML::Page::End, Tags::Output::Raw, Unicode::UTF8.
 
+SEE ALSO
+    Plack::App::Login::Password
+        Plack login/password application.
+
 REPOSITORY
     <https://github.com/michal-josef-spacek/Plack-App-Login>
 
