@@ -141,9 +141,8 @@ EXAMPLE
      # </html>
 
 DEPENDENCIES
-    CSS::Struct::Output::Raw, Error::Pure, Plack::Util::Accessor,
-    Scalar::Util, Tags::HTML::Login::Button, Tags::HTML::Page::Begin,
-    Tags::HTML::Page::End, Tags::Output::Raw, Unicode::UTF8.
+    Plack::Component::Tags::HTML, Plack::Util::Accessor,
+    Tags::HTML::Login::Button.
 
 SEE ALSO
     Plack::App::Login::Password

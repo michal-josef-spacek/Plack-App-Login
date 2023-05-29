@@ -1,6 +1,7 @@
 0.08
  - Add SEE ALSO section to doc.
  - Improve example in doc.
+ - Rewrite to Plack::Component::Tags::HTML.
  - Update Module::Install to 1.21 version.
 
 0.07 2023-02-10T22:24:02+01:00
