@@ -1,6 +1,5 @@
 TODO
 ====
-2. Dodelat coverage.
 3. Proc mam newline v Tags::Output::Raw testu.
 8. Add ERRORS section to doc.
 9.
@@ -23,4 +22,7 @@ There is Plack::App::Login::Password
 NONE [20230529] skim
 
 7. Rewrite to use of Plack::Component::Tags::HTML
+OK [20230529] skim
+
+2. Dodelat coverage.
 OK [20230529] skim
