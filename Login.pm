@@ -9,6 +9,14 @@ use Tags::HTML::Login::Button;
 
 our $VERSION = 0.08;
 
+sub _css {
+	my $self = shift;
+
+	$self->{'_login_button'}->process_css;
+
+	return;
+}
+
 sub _prepare_app {
 	my $self = shift;
 
@@ -40,14 +48,6 @@ sub _prepare_app {
 		'tags' => $self->{'tags'},
 		'title' => $self->login_title,
 	);
-
-	return;
-}
-
-sub _css {
-	my $self = shift;
-
-	$self->{'_login_button'}->process_css;
 
 	return;
 }
